@@ -28,6 +28,7 @@ DataAttribute* toDataAttribute(ModelNode * MN)
 { return (DataAttribute*)MN;}
 %}
 %apply int *OUTPUT {IedClientError* error};
+%apply bool *OUTPUT {bool* isDeletable};
 
 %include "libiec61850_common_api.h"
 %include "iec61850_client.h"
