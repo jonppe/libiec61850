@@ -10,6 +10,8 @@
 #include <iec61850_client.h>
 #include <iec61850_model.h>
 #include <iec61850_server.h>
+#include <mms_common.h>
+
 ModelNode* toModelNode(LogicalNode * ln)
 {
     return (ModelNode*) ln;
@@ -37,6 +39,7 @@ DataAttribute* toDataAttribute(ModelNode * MN)
 %include "iso_connection_parameters.h"
 %include "iec61850_common.h"
 %include "mms_value.h"
+%include "mms_common.h"
 %include "iec61850_model.h"
 %include "iec61850_server.h"
 %include "iec61850_dynamic_model.h"
