@@ -24,6 +24,13 @@ char* toCharP(void * v)
 {
     return (char *) v;
 }
+/** toVoidP allows using strings for LinkedList data. LinkedList_destroy() will free() it. */
+void* toVoidP(char * s)
+{
+    void * v = malloc(strlen(s)+1);
+    strcpy((char*)v, s);
+    return v;
+}
 DataAttribute* toDataAttribute(DataObject * DO)
 { return (DataAttribute*)DO;}
 DataAttribute* toDataAttribute(ModelNode * MN)
@@ -50,3 +57,4 @@ ModelNode* toModelNode(DataObject *);
 DataAttribute* toDataAttribute(DataObject *);
 DataAttribute* toDataAttribute(ModelNode *);
 char* toCharP(void *);
+void* toVoidP(char *);
